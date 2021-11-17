@@ -44,7 +44,7 @@ export class Config {
 				fulltext: [ 'tokenDetails.name', 'tokenDetails.symbol' ]
 			},
 			graphs: {
-				keys: [ 'tokenDetails.tokenIdHex', 'tokenDetails.nftGroupIdHex', 'graphTxn.txid', 'graphTxn.outputs.spendTxid'],
+				keys: [ 'tokenDetails.tokenIdHex', 'tokenDetails.nftGroupIdHex', 'graphTxn.txid', 'graphTxn.outputs.spendTxid', 'graphTxn.outputs.address'],
 				fulltext: [ ]
 			},
 			confirmed: {
