@@ -22,7 +22,7 @@ let setNetworkSync: (network: string) => void = sp(Info.setNetwork);
 let queryInitSync: () => void = sp(Query.init);
 let chain = getBlockchainInfoSync().chain;
 
-const networksAvailable = ['mainnet', 'testnet', 'regtest']
+const networksAvailable = ['mainnet', 'test', 'regtest']
 let network : string = networksAvailable.includes(chain) ? chain : 'mainnet'
 
 setNetworkSync(network);

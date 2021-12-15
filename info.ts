@@ -18,7 +18,7 @@ export module Info {
 
 	export const setNetwork =  async function(network: string): Promise<void> {
 		try {
-			if(network === 'testnet')
+			if(network === 'test')
 				kv = level('./_leveldb_testnet');
 			await kv.put('network', network);
 		} catch(_) { }
