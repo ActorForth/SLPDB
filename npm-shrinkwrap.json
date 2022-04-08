@@ -812,6 +812,15 @@
         "cashaddrjs-slp": "^0.2.12"
       }
     },
+    "bchaddrjs-slp-2": {
+      "version": "0.3.0",
+      "resolved": "https://registry.npmjs.org/bchaddrjs-slp-2/-/bchaddrjs-slp-2-0.3.0.tgz",
+      "integrity": "sha512-E/9mmIQpEHi0hF1LQ5jCgc2hY5GVGjd36BIYN4waOJg/r73hPA/gY71/lsOfCdF3/6iCEx20n1B5FcXbY0376w==",
+      "requires": {
+        "bs58check": "^2.1.2",
+        "cashaddrjs-slp": "^0.2.12"
+      }
+    },
     "bclient": {
       "version": "0.1.7",
       "resolved": "https://registry.npmjs.org/bclient/-/bclient-0.1.7.tgz",
@@ -7638,6 +7647,43 @@
           "version": "4.17.20",
           "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz",
           "integrity": "sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA=="
+        }
+      }
+    },
+    "slpjs-regtest": {
+      "version": "0.27.5",
+      "resolved": "https://registry.npmjs.org/slpjs-regtest/-/slpjs-regtest-0.27.5.tgz",
+      "integrity": "sha512-VM+tqaQGnyrR39Z8URNY4TBb9OS2nJy82IR+u1rnBkd5ikgKBCuH2FH7ZJXiEhhM18A7iPcsfJ3VtcAQ77Z15Q==",
+      "requires": {
+        "@types/crypto-js": "^3.1.47",
+        "@types/lodash": "^4.14.156",
+        "@types/randombytes": "^2.0.0",
+        "@types/socket.io": "^2.1.8",
+        "@types/socket.io-client": "^1.4.33",
+        "@types/wif": "^2.0.1",
+        "axios": "^0.18.1",
+        "bchaddrjs-slp": "^0.2.9",
+        "bchaddrjs-slp-2": "^0.3.0",
+        "bignumber.js": "9.0.0",
+        "crypto-js": "^4.0.0",
+        "grpc-bchrpc-node": "^0.10.2",
+        "lodash": "^4.17.15",
+        "slp-mdm": "0.0.6"
+      },
+      "dependencies": {
+        "bchaddrjs-slp": {
+          "version": "0.2.14",
+          "resolved": "https://registry.npmjs.org/bchaddrjs-slp/-/bchaddrjs-slp-0.2.14.tgz",
+          "integrity": "sha512-4EdUV6Kwu2Ae8QyYtLAnHOUu0Zfl0w5wDPbeftiu3+fVr6ZyPmuVKlZtU2HERx76BOngZpGTf+suM3nuPJ0Tuw==",
+          "requires": {
+            "bs58check": "^2.1.2",
+            "cashaddrjs-slp": "^0.2.12"
+          }
+        },
+        "lodash": {
+          "version": "4.17.21",
+          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz",
+          "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
         }
       }
     },
