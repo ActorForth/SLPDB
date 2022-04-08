@@ -44,9 +44,14 @@ USER safeuser
 # Clone the SLPDB repository
 WORKDIR /home/safeuser
 
+# Use docker cache for npm stuff, unless some dependency changes. code-only change will not invalidate this cache
+COPY package.json .
+# It is upto the developer who adjusts dependency to commit the new shrinkwrap
+COPY npm-shrinkwrap.json .
+RUN npm ci
+
 COPY . .
 
-RUN npm install
 
 VOLUME /home/safeuser/config
 
