@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 1000000 --exit --require mocha-steps",
-    "start": "tsc && node --max_old_space_size=16384 index run",
+    "start": "tsc && node --max_old_space_size=32768 index run",
     "lint": "./node_modules/.bin/eslint .",
     "migrate": "./node_modules/.bin/migrate-mongo"
   },
