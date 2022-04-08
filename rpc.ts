@@ -24,6 +24,18 @@ export class RpcClient {
         } else {
             rpc = new _rpcClient(connectionString, { maxRetries: 0 });
             rpc_retry = new _rpcClient(connectionString, { maxRetries: Config.rpc.rpcMaxRetries, timeoutMs: Config.rpc.rpcTimeoutMs, retryDelayMs: Config.rpc.rpcRetryDelayMs });
+            // Hack: overide the underlying protocol to reuse connections
+            // The underlying library allows specifying custom options for the client, re: https://github.com/bitpay/bitcoind-rpc/blob/96257629cfa36f9e1a36500f69d209cdc3cba0a7/lib/index.js#L85-L89
+            // Here we enforce the usage of our own agent which has keep-alive enabled.
+            if (!rpc.httpOptions) {
+                rpc.httpOptions = {}
+            }
+            rpc.httpOptions.agent = new rpc.protocol.Agent({keepAlive: true})
+            if (!rpc_retry.httpOptions) {
+                rpc_retry.httpOptions = {}
+            }
+            rpc_retry.httpOptions.agent = new rpc_retry.protocol.Agent({keepAlive: true})
+
         }
     }
 
